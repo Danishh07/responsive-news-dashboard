@@ -1,33 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Responsive News Dashboard
+
+A responsive dashboard application built with Next.js that includes news integration, user authentication, and payout calculation features.
+
+## Features
+
+- **User Authentication:** Secure login and registration with email/password and OAuth options
+- **News Integration:** Fetch and display news articles from various sources
+- **Advanced Filtering:** Search and filter news by author, date, and type
+- **Responsive Design:** Mobile-first approach for all device compatibility
+- **Admin Dashboard:** Special features for admin users, including payout management
+- **Payout Calculator:** Automatic calculation based on content rates
+- **Export Functionality:** Export payout reports as PDF or CSV
+- **Dark Mode Support:** Toggle between light and dark themes
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Configure environment variables:
+   - Copy `.env.local.example` to `.env.local` (already done)
+   - Update the values as needed
+   - The project is now configured to use NewsData.io API
+
+### OAuth Configuration (Optional)
+
+To enable Google OAuth authentication:
+
+1. Go to [Google Cloud Console](https://console.cloud.google.com/)
+2. Create a new project or select existing one
+3. Enable Google+ API
+4. Create OAuth 2.0 credentials
+5. Add these to your `.env.local`:
+   ```bash
+   GOOGLE_CLIENT_ID=your_google_client_id
+   GOOGLE_CLIENT_SECRET=your_google_client_secret
+   ```
+6. Add authorized redirect URIs:
+   - `http://localhost:3000/api/auth/callback/google`
+   - `https://yourdomain.com/api/auth/callback/google` (for production)
+
+4. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Demo Accounts
 
-To learn more about Next.js, take a look at the following resources:
+For testing purposes, the following demo accounts are available:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Admin User**
+  - Email: admin@example.com
+  - Password: admin123
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Regular User**
+  - Email: user@example.com
+  - Password: user123
+
+## Technical Details
+
+This project uses:
+
+- **Next.js 14+** with App Router
+- **TypeScript** for type safety
+- **Redux Toolkit** for state management
+- **NextAuth.js** for authentication
+- **Tailwind CSS** for styling
+- **Recharts** for data visualization
+- **jsPDF** for PDF export functionality
+
+## Project Structure
+
+- `src/app/*` - Next.js app router pages
+- `src/components/*` - Reusable UI components
+- `src/redux/*` - Redux state management
+- `src/lib/*` - Utility functions and services
+- `src/services/*` - API integration services
+- `src/types/*` - TypeScript type definitions
 
 ## Deploy on Vercel
 
