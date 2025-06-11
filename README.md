@@ -1,6 +1,29 @@
-# Responsive News Dashboard
+# 📰 Responsive News Dashboard
 
-A responsive dashboard application built with Next.js that includes news integration, user authentication, and payout calculation features.
+A comprehensive, modern dashboard application built with **Next.js 15** featuring authentication, news management, and admin payout system with export capabilities.
+
+[![Next.js](https://img.shields.io/badge/Next.js-15-black)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
+[![Redux Toolkit](https://img.shields.io/badge/Redux-Toolkit-purple)](https://redux-toolkit.js.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-cyan)](https://tailwindcss.com/)
+
+## 🎯 **Assignment Features Completed**
+
+### ✅ **Core Requirements**
+- **🔐 User Authentication** - Google OAuth + Email/Password with NextAuth.js
+- **📰 News Integration** - Real-time data from News API with offline support
+- **🔍 Advanced Filtering** - Search by author, date range, and content type
+- **📱 Responsive Design** - Mobile-first approach with Tailwind CSS
+- **💰 Admin Payout System** - Dynamic rate calculation and management
+- **📤 Export Functionality** - PDF, CSV, and Google Sheets integration
+
+### 🏆 **Bonus Features**
+- **🌙 Dark/Light Mode** - Complete theme system
+- **🧪 Testing Suite** - Jest + React Testing Library (24+ tests)
+- **📊 Analytics Dashboard** - Interactive charts and statistics
+- **🔒 Role-Based Access** - Admin vs User permissions
+- **💾 Offline Support** - IndexedDB for data persistence
+- **⚡ Performance Optimized** - SSR, lazy loading, optimized builds
 
 ## Features
 
